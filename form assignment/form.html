@@ -16,19 +16,27 @@
     h1 {
       font-size:2.7em;
       letter-spacing: -1.3px;
-    }
-
-    h1, h2, h3, h4 {
-      margin-bottom: 20px;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       line-height: 1.2;
+      margin-bottom: 20px;
       color: #00549f;
     }
-
-    p {
-      margin-bottom: 20px;
-      line-height: 1.4;
+    
+    input[type=text] {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: medium;
+      padding-left: 5px;
     }
+    
+	button[type=submit], textarea, select {
+      margin-top: 7px;
+      margin-right: 15px;
+      padding: 0 9px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1em;
+      width: auto;
+     }
+
+
   </style>
 <body>
 
@@ -36,20 +44,21 @@
 
   <form action="/submit-order" method="post">
     
-    <label for="firstName">First Name:</label>
+    <label for="firstName">First Name: </label>
     <input type="text" id="firstName" name="firstName" minlength="2" maxlength="30" required>
     <br><br>
 
-    <label for="lastName">Last Name:</label>
+    <label for="lastName">Last Name: </label>
     <input type="text" id="lastName" name="lastName" minlength="2" maxlength="30" required>
     <br><br>
 
-    <label for="food">Choose your food preference:</label>
+    <label for="food">Main Dish preference:</label>
     <select id="food" name="food" required>
-      <option value="">--Please choose an option--</option>
+      <option value="">-- Choose an option --</option>
       <option value="chicken">Chicken</option>
       <option value="beef">Beef</option>
       <option value="fish">Fish</option>
+      <option value="vegan">Vegan</option>
     </select>
     <br><br>
 
