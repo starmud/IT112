@@ -1,0 +1,11 @@
+{
+    "name": "John Appleseed",
+    "age": 30,
+    "city": "New York",
+    "interests": [
+        "reading",
+        "traveling",
+        "swimming"
+    ],
+    "is_student": false
+}
