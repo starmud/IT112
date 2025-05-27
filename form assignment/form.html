@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Order Form</title>
+</head>
+  <style>
+
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 10px;
+    }
+
+/* typography */
+
+    h1 {
+      font-size:2.7em;
+      letter-spacing: -1.3px;
+    }
+
+    h1, h2, h3, h4 {
+      margin-bottom: 8px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      line-height: 1.2;
+      color: #00549f;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+  </style>
+<body>
+
+  <h1>Customer Food Order Form</h1>
+
+  <form action="/submit-order" method="post">
+    
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" minlength="2" maxlength="30" required>
+    <br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" minlength="2" maxlength="30" required>
+    <br><br>
+
+    <label for="food">Choose your food preference:</label>
+    <select id="food" name="food" required>
+      <option value="">--Please choose an option--</option>
+      <option value="chicken">Chicken</option>
+      <option value="beef">Beef</option>
+      <option value="fish">Fish</option>
+    </select>
+    <br><br>
+
+    <label for="allergies">Allergies (if any):</label>
+    <br>
+    <textarea id="allergies" name="allergies" rows="4" cols="40" placeholder="List any allergies here..."></textarea>
+    <br><br>
+
+    <button type="submit">Send</button>
+
+  </form>
+
+</body>
+</html>
