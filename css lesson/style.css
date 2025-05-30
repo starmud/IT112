@@ -1,8 +1,8 @@
   /* CSS for the lesson page */
-    
+
     body {
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      background-color: #000000;
+      background-color: #1b1b1b;
       text-align: center;
       padding: 40px;
     }
@@ -24,13 +24,38 @@
       margin-bottom: 30px;
     }
 
+
+    /* Style for text list */
+
+    .one {
+        color: crimson;
+    }
+
+    .two {
+        color: #71cea1;
+    }
+
+    .three {
+        color: #FBEC5D;
+    }
+
+    .four {
+        color: red;
+    }
+
+    .five {
+        color: #CC5500;
+    }
+
+    /* Style for the buttons */
+
     .buttons {
       display: flex;
       justify-content: center;
       gap: 20px;
     }
 
-    .yes-button {
+    #yes-button {
       background-color: green;
       color: white;
       padding: 10px 20px;
@@ -40,7 +65,7 @@
       cursor: pointer;
     }
 
-    .no-button {
+    #no-button {
       background-color: red;
       color: white;
       padding: 10px 20px;
