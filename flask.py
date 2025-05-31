@@ -21,7 +21,7 @@ def reporter(reporter_id=None): # This function handles the reporter page
     '''
 
 @app.route('/article')
-@app.route('/article/<article_name>')
+@app.route('/article/<article_name>') # /tagged/X, where X could be any tag.
 def article(article_name=None):
     if article_name is None:
       return "<h2>No article name provided.</h2><a href='/'>Return back to home page</a>"
