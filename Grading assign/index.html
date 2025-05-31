@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Grade Assigner</title>
+  
+<style>
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    background-color: #1b1b1b;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #FFFFFF;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  input, button {
+  	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  #scoreInput {
+    width: 100px;
+    max-width: 80%;
+  }
+  
+   #result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+</style>
+
+</head>
+
+<body>
+
+  <h1>Enter Score</h1>
+  
+  <input type="number" id="scoreInput" placeholder="0 - 100" min="0" max="100">
+
+  <button onclick="showGrade()">Get Grade</button>
+
+ 
+  <div id="result"></div>
+
+  <script>
+  
+  // formulate grade
+  
+    function assignedScore(score) {
+      if (score >= 90) {
+        return "Wow, You scored an A!";
+      } 
+      else if (score >= 80) {
+        return "You scored a B!";
+      } 
+      else if (score >= 70) {
+        return "You scored a C!";
+      } 
+      else if (score >= 60) {
+        return "You scored a D!";
+      } 
+      else {
+        return "You scored an F!";
+      }
+    }
+    
+    // print results on page versus pop up
+
+    function showGrade() {
+      const score = parseInt(document.getElementById('scoreInput').value);
+      const resultDiv = document.getElementById('result');
+      
+      // verify 
+
+      if (isNaN(score) || score < 0 || score > 100) {
+        resultDiv.textContent = "Enter a score between 0 & 100";
+        resultDiv.style.color = "pink";
+      } else { // print result
+        resultDiv.textContent = assignedScore(score);
+        resultDiv.style.color = "#fff";
+      }
+    }
+    
+  </script>
+
+</body>
+
+</html>
+<!--
+  This code is a simple web page that allows users to input a score between 0 and 100.
+  It then calculates the corresponding grade based on the score and displays it on the page.
+  The grading scale is as follows:
+    - A: 90 and above
+    - B: 80 to 89
+    - C: 70 to 79
+    - D: 60 to 69
+    - F: below 60
+  The page includes basic styling for a clean and modern look.
+  The JavaScript functions handle the logic for grading and displaying results.
+  The input field accepts only numbers, and the result is displayed in a div below the input.
+  The page is designed to be user-friendly and visually appealing with a dark theme. -->
