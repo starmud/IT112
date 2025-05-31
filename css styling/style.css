@@ -1,0 +1,58 @@
+  body {
+    background-color: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+  }
+
+  h1 {
+    color: #389549;
+  }
+
+  h2 {
+    color: #ba63da;
+  }
+  
+  .song {
+  	 line-height: 1.6;
+     text-align: center;
+     background-color: #222;
+     padding: 20px;
+     border-radius: 10px;
+     line-height: 1.8;
+     max-width: 350px;
+     margin: 10px;
+    }
+    
+   .line1 { color: #ffd1dc; }  /* pastel pink */
+   .line2 { color: #ffdab9; }  /* pastel peach */
+   .line3 { color: #e0bbff; }  /* pastel purple */
+   .line4 { color: #b2f7ef; }  /* pastel teal */
+   .line5 { color: #c1f0f6; }  /* light aqua */
+   .line6 { color: #baffc9; }  /* pastel green */
+   .line7 { color: #ffffba; }  /* pastel yellow */    
+   .line8 { color: #ffdfba; }  /* pastel orange */
+   .line9 { color: #d5aaff; }  /* soft lavender */
+   .line10 { color: #a0ced9; } /* dusty blue */
+   .line11 { color: #ffc9de; } /* light rose */
+   .line12 { color: #c5f3c1; } /* mint green */
+
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  .highlight {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+  }
