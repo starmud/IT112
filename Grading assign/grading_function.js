@@ -17,3 +17,14 @@ function assignedScore(score) {
         return "You scored an F!";
       }
     }
+
+// Function to display the score in a pop-up message
+
+function displayScore(score) {
+    const message = assignedScore(score);
+    alert(message);
+}
+// Example score (display) as shown on homework notes
+
+const score = 95; // score
+displayScore(score); // display score
