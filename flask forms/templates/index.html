@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .names-list {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .name-item {
+            background-color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Name Collection</h1>
+    
+    <!-- Simple Form -->
+    <form action="{{ url_for('add_name') }}" method="POST" id="nameForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Display Names -->
+    <div class="names-list">
+        <h3>Submitted Names:</h3>
+        {% if names %}
+            {% for name in names %}
+                <div class="name-item">{{ name.name }}</div>
+            {% endfor %}
+        {% else %}
+            <p>No names submitted yet.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        // Simple validation
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            const nameInput = document.getElementById('name');
+            
+            if (!nameInput.value.trim()) {
+                e.preventDefault();
+                alert('Please enter a name.');
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
